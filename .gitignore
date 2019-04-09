@@ -1,3 +1,7 @@
 .ipynb_checkpoints/*
 download/.ipynb_checkpoints/*
 download/__pycache__/*
+
+benchmark/.ipynb_checkpoints/*
+benchmark/__pycache__/*
+

@@ -1,0 +1,4 @@
+h5py
+pytorch >= 1.0
+tqdm
+pandas
