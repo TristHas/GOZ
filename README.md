@@ -45,10 +45,6 @@ This folder is intended for people interested in either
 WARNING: Some of the experiments in this folder require you to download the full Imagenet dataset and to extract Resnet features from the full dataset.
 Downloading the 13M images of the Imagenet dataset can be time-consuming, even with parallel downloads, and need large storage capacity. 
 
-For researchers interested in experimenting on different test splits with limited resurces, we propose a trick we have been using:
-Instead of working on individual images, we have been working on the mean visual feature activations.
-This drastically speeds up processing time at the cost of ignoring the intra-class variance of the visual feature distribution.
-Please refer to the Experiments folder's readme for more detailed explanations
 
 ## Data
 
