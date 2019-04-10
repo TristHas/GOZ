@@ -6,3 +6,6 @@ benchmark/.ipynb_checkpoints/*
 benchmark/__pycache__/*
 
 data/downloads/full_imagenet_urls.txt
+
+experiments/.ipynb_checkpoints/*
+experiments/__pycache__/*
