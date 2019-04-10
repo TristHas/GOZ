@@ -7,7 +7,26 @@ As of today, you can download these features from the following url:
 training features: https://drive.google.com/open?id=1_XFAswLqvcH2FkO_aa3CDpiRTcUXM1gm
 test features: https://drive.google.com/open?id=1Ru3nd9ZsHF_TzPorLackI83dWfe98u4s
 
-To evaluate the baseline linear and gcn models using the jupyter notebooks in the benchmark folder, make sure you download these files to the data/visuals/features/ folder or edit the corresponding pathes in the  data/visuals/features/helpers.py file.
+To evaluate the baseline linear and gcn models using the jupyter notebooks in the benchmark folder,
+make sure you download these files to the data/visuals/features/ folder or edit the corresponding pathes in the  data/visuals/features/helpers.py file.
+
+The datasets are h5py.File objects contain two subgroups images and idx:
+- The images group contains one HDF5 dataset per class with size (N samples, 2048) and type float32 containing the extracted visual features.
+- The images group contains one HDF5 dataset per class with size (N samples,) and type int8 containing the id of the original imageof each extracted features. 
+
+For example:
+
+'''
+- images
+-- <HDF5 dataset 'n00141669': shape (100, 2048), type "<f4">
+...
+-- <HDF5 dataset 'n00440747': shape (100, 2048), type "<f4">
+
+- idx
+-- <HDF5 dataset "n00141669": shape (100,), type "<i8">
+...
+-- <HDF5 dataset "n00440747": shape (100,), type "<i8">
+'''
 
 # Download Images
 
@@ -31,6 +50,14 @@ cd /path/to/GOZ/download
 bash ./imagenet_urls.sh
 
 You can then download the full Imagenet dataset using the Download Images notebook by changing the url_path variable to ../data/downloads/full_imagenet_urls.txt
+
+# Extract visual features
+
+The notebook "Extract visual.ipynb" shows code snippets to extract resnet features from the downloaded raw images.
+
+Features are saved as h5py datasets in the location (data/visuals/features/) used by the benchmark notebooks.
+
+The structure of the resulting h5py.File datasets is the same as the downloadable features.
 
 # Caution
 
