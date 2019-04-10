@@ -1,185 +1,57 @@
-# Generic Object ZSL Datast
+# Generic Object ZSL Dataset (GOZ)
 
-This repository references the dataset described in the paper "On Zero-Shot Learning of generic objects" to be presented at CVPR 2019.
-It also provides code to reproduce the different experiments presented in the paper, as well as code to manipulate the Wordnet hierarchy and Imagenet metadata to generate new training/test class splits of the Imagenet dataset subject to different constraints.
+This repository references the dataset described in the paper "On Zero-Shot Learning of generic objects" to be presented at CVPR 2019. [arxiv link]
+In addition to the instructions to download the dataset, it also provides code to reproduce the different experiments presented in the paper, 
+as well as code to manipulate the Wordnet hierarchy and Imagenet metadata in order to experiment with different training/test class splits 
+of the Imagenet dataset subject to different constraints.
 
-## About this repository
+# About this repository
 
-People interested in downloading the dataset can follow the instructions in XXX. 
-People interested in the dataset generation process and experiments presented in the paper should refer to XXX.
+This repository is organized into four folders.
+Each folder has its own readme and its own python package requirements (requirements.txt)
 
-### Dependencies
-
-### Download
-
-Downloading the GOZ dataset:
-
-If you are only interested in downloading the dataset, you do not need to install the full set of dependices listed in the requirements.txt.
-You can just clone the repo and check out the code and instructions of the download folder.
-You can either work on raw images or download the Resnet-50 feature representations of the original images used in the paper.
-
-To download the original images, see the notebook download/original.ipynb
-We only provide code to download the images of the test.
-The training set is the usual training set of the ILSVRC 2012 classification challenge. 
-Please directly download it from the imagenet website (http://image-net.org/download-images).
-
-Alternatively, you can work on the extracted resnet features used in the paper.
-Features are provided for both the training and test sets. 
-To download the visual features, see the notebook download/features.ipynb.
-
-### Benchmark
-
-What things you need to install the software and how to install them
+To start experimenting with this dataset, first clone the repo
 
 ```
-Give examples
+git clone https://github.com/TristHas/GOZ.git
 ```
 
-### Experiments
+and refer to the folder you are interested in, as described below:
 
-Dataset Creation:
-To either reproduce some of the experiments of the paper or to experiment with test splits different from the proposed one, you will need to:
- - Install the dependencies defined in the requirements.txt
- - Download the full Imagenet dataset (>13M images, XXX GB) or a subset of interest to you.
+## Download
 
-We share scripts to efficiently download Imagenet images in parallel.
-Downloading the 13M images of the Imagenet dataset can be time-consuming, even with parallel accesses, and need large storage capacity. 
+People interested in evaluating their ZSL model on the GOZ dataset should refer to the Download folder.
+You can either download Resnet extracted feature representations of the dataset or the original images.
+
+In addition to the download of the ZSL dataset, we also provide scripts for downloading arbitrary splits of the Imagenet dataset, 
+as well as scripts to extract visual features from the downloaded raw images.
+
+See the readme of the download folder for more precise instructions.
+
+## Benchmark
+
+This folder contains the notebooks used to evaluate the few baseline models on the GOZ dataset as presented in Table of the paper.
+You can use these notebooks as a starting point to develop new ideas/models.
+
+## Experiments
+
+This folder is intended for people interested in either 
+ - the dataset generation process
+ - experiments presented in the paper
+ - experimenting with different training/test splits than the one proposed in the paper 
+
+WARNING: Some of the experiments require you to download the full Imagenet dataset and to extract Resnet features from the full dataset.
+Downloading the 13M images of the Imagenet dataset can be time-consuming, even with parallel downloads, and need large storage capacity. 
+
 For researchers interested in experimenting on different test splits with limited resurces, we propose a trick we have been using:
 Instead of working on individual images, we have been working on the mean visual feature activations.
-This drastically speeds up processing time at the cost of ignoring the intra-class variance of visual feature distribution.
+This drastically speeds up processing time at the cost of ignoring the intra-class variance of the visual feature distribution.
+Please refer to the Experiments folder's readme for more detailed explanations
 
+## Data
 
-Dataset creation/manipulation:
-The bulk of the code used to create the dataset is contained in the src folder.
-The folder dataset features the notebooks used to create the dataset.
+This folder serializes the data needed for either downloading, benchmarking or experimentuing with new training/test splits.
 
-Experiments reproduction:
-The folder experiments features notebooks to reproduce the experiments presented in the paper.
-
-Data and dependencies
-Dependencies on python modules are listed in the requirements.txt file at the root of the repository.
-Additional data needed for the experiments such as the Wikipedia word counts can be found in the data folder.
-
-
-### Citation
+# Citation
 
 If you use this dataset for your research, please cite the following paper:
-
-
-
-### Rest of the README template
-
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-
-
-
-People interested in downloading the dataset can follow the instructions in XXX. 
-People interested in the dataset generation process and experiments presented in the paper should refer to XXX.
-
-Downloading the GOZ dataset:
-
-If you are only interested in downloading the dataset, you do not need to install the full set of dependices listed in the requirements.txt.
-You can just clone the repo and check out the code and instructions of the download folder.
-You can either work on raw images or download the Resnet-50 feature representations of the original images used in the paper.
-
-To download the original images, see the notebook download/original.ipynb
-We only provide code to download the images of the test.
-The training set is the usual training set of the ILSVRC 2012 classification challenge. 
-Please directly download it from the imagenet website (http://image-net.org/download-images).
-
-Alternatively, you can work on the extracted resnet features used in the paper.
-Features are provided for both the training and test sets. 
-To download the visual features, see the notebook download/features.ipynb.
-
-
-
-Dataset Creation:
-To either reproduce some of the experiments of the paper or to experiment with test splits different from the proposed one, you will need to:
- - Install the dependencies defined in the requirements.txt
- - Download the full Imagenet dataset (>13M images, XXX GB) or a subset of interest to you.
-
-We share scripts to efficiently download Imagenet images in parallel.
-Downloading the 13M images of the Imagenet dataset can be time-consuming, even with parallel accesses, and need large storage capacity. 
-For researchers interested in experimenting on different test splits with limited resurces, we propose a trick we have been using:
-Instead of working on individual images, we have been working on the mean visual feature activations.
-This drastically speeds up processing time at the cost of ignoring the intra-class variance of visual feature distribution.
-
-
-Dataset creation/manipulation:
-The bulk of the code used to create the dataset is contained in the src folder.
-The folder dataset features the notebooks used to create the dataset.
-
-Experiments reproduction:
-The folder experiments features notebooks to reproduce the experiments presented in the paper.
-
-Data and dependencies
-Dependencies on python modules are listed in the requirements.txt file at the root of the repository.
-Additional data needed for the experiments such as the Wikipedia word counts can be found in the data folder.
-
-
