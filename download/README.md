@@ -16,7 +16,7 @@ The datasets are h5py.File objects contain two subgroups images and idx:
 
 For example:
 
-'''
+```
 - images
 -- <HDF5 dataset 'n00141669': shape (100, 2048), type "<f4">
 ...
@@ -26,7 +26,7 @@ For example:
 -- <HDF5 dataset "n00141669": shape (100,), type "<i8">
 ...
 -- <HDF5 dataset "n00440747": shape (100,), type "<i8">
-'''
+```
 
 # Download Images
 
