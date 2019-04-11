@@ -54,9 +54,11 @@ This folder provides the data needed for either downloading, benchmarking or exp
 
 If you use this dataset for your research, please cite the following paper:
 
+```
 @article{hascoet2019goz,
   title={On Zero-Shot Learning of generic objects},
   author={Hascoet, Tristan and Ariki, Yasuo and Takiguchi, Tetsuya},
   journal={arXiv preprint arXiv:1904.04957},
   year={2019}
 }
+```
