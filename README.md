@@ -1,6 +1,6 @@
 # Generic Object ZSL Dataset (GOZ)
 
-This repository references the dataset described in the paper "On Zero-Shot Learning of generic objects" to be presented at CVPR 2019. [arxiv link]
+This repository references the dataset described in the paper "On Zero-Shot Learning of generic objects" to be presented at CVPR 2019. (http://arxiv.org/abs/1904.04957)
 
 In addition to the instructions to download the dataset, it also provides code to:
  - benchmark the few baseline models evaluated in the final section of the paper
@@ -53,3 +53,10 @@ This folder provides the data needed for either downloading, benchmarking or exp
 # Citation
 
 If you use this dataset for your research, please cite the following paper:
+
+@article{hascoet2019goz,
+  title={On Zero-Shot Learning of generic objects},
+  author={Hascoet, Tristan and Ariki, Yasuo and Takiguchi, Tetsuya},
+  journal={arXiv preprint arXiv:1904.04957},
+  year={2019}
+}
