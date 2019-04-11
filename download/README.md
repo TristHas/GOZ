@@ -4,8 +4,8 @@ The Resnet feature representations are currently hosted on a personal Google Dri
 We will try to move these files to a more permanent storage solutions so this is likely to change.
 As of today, you can download these features from the following url:
 
-training features: https://drive.google.com/open?id=1_XFAswLqvcH2FkO_aa3CDpiRTcUXM1gm
-test features: https://drive.google.com/open?id=1Ru3nd9ZsHF_TzPorLackI83dWfe98u4s
+- training features: https://drive.google.com/open?id=1_XFAswLqvcH2FkO_aa3CDpiRTcUXM1gm
+- test features: https://drive.google.com/open?id=1Ru3nd9ZsHF_TzPorLackI83dWfe98u4s
 
 To evaluate the baseline linear and gcn models using the jupyter notebooks in the benchmark folder,
 make sure you download these files to the data/visuals/features/ folder or edit the corresponding pathes in the  data/visuals/features/helpers.py file.
