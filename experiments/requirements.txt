@@ -1,0 +1,7 @@
+nltk
+networkx>=2
+plotly
+matplotlib
+pandas 
+numpy
+pytorch
